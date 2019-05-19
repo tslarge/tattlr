@@ -1,3 +1,7 @@
 venv
 .py[co]
+# Ignore potentially sensitive email info in samples
+# but not directory itself
 samples/*
+!samples/.gitkeep
+
