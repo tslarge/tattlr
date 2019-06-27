@@ -2,6 +2,10 @@
 
 import abuse_address
 
-abuseEmail = abuse_address.findAbuseAddress('tslarge.com')
 
+def main():
+abuseEmail = abuse_address.findAbuseAddress('tslarge.com')
 print(abuseEmail)
+
+if __name__ == "__main__":
+    main()
