@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
 
-import subprocess
+import abuse_address
 
-whois = subprocess.run(['whois','tslarge.com'], capture_output=True)
+abuseEmail = abuse_address.findAbuseAddress('tslarge.com')
 
-whoisResult = whois.stdout.decode('utf-8').split('\n')
-
-for item in whoisResult:
-    itemSplit = item.split(':')
-    if itemSplit[0] == "Registrar Abuse Contact Email":
-        print(itemSplit[1])
+print(abuseEmail)
